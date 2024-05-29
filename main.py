@@ -1,3 +1,5 @@
+from conversor_medidas import ConversorMedidas
+
 def menu_principal():
     print("/n** Calculadora de conversão de unidades**")
     print("1. Converter Comprimento")
