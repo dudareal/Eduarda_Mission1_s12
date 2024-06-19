@@ -1,17 +1,23 @@
 from conversor_medidas import ConversorMedidas
+from conversor_temperatur import Temperatura
 
-def menu_principal():
-    print("/n** Calculadora de conversão de unidades**")
-    print("1. Converter Comprimento")
-    print("3. Sair")
+print('''
+[1]. Metros para Centímetros
+[2]. Centímetros para Metros
+[3]. Celsius para Fahrenheint
+[4]. Fahrenheit para Celsius
+''')
 
-    opçao = input("Digite a opção desejada:")
-    return opçao   
+opcao = input('Escolha uma opção: ')
+valor = float(input('Insira um valor: '))
 
-def sair():
-    print("Encerrando o programa...")
-
-escolha = menu_principal()
-
-if escolha == '3':
-    sair()
+if opcao == '1':
+    resultado = ConversorMedidas.metrosParaCentimetros(valor)
+elif opcao == '2':
+    resultado = ConversorMedidas.centimetrosParaMetros(valor)
+elif opcao == '3':
+    resultado = Temperatura.celsiusParaFahrenheint(valor)
+else:
+    resultado = Temperatura.fahrenheitParaCelsius(valor)
+    
+print('Resultado:', resultado)

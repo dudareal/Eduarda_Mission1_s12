@@ -1,5 +1,9 @@
 class ConversorMedidas:
-    def __init__(self):
+    def __init__():
         pass
-centimetros = 'metros'*100
-metros = 'centimetros' /100
+
+    def metrosParaCentimetros(metros):
+        return metros * 100
+    
+    def centimetrosParaMetros(centimetros):
+        return centimetros / 100
